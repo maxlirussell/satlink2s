@@ -1,0 +1,28 @@
+[
+    {
+        "model":"华际科工1.0mKu船载动中通天线",
+        "diameter":"0.9",
+        "band":"Ku",
+        "efficiency":"60",
+        "bucPower":"6",
+        "bucLo":"12800",
+        "lnbLo":"9750",
+        "lnbGain":"53",
+        "antennaNoise":"48",
+        "lnbNoise":"65",
+        "feederLength":"30"
+    },
+    {
+        "model":"华际科工0.6mKu船载动中通天线",
+        "diameter":"0.6",
+        "band":"Ku",
+        "efficiency":"60",
+        "bucPower":"6",
+        "bucLo":"12800",
+        "lnbLo":"9750",
+        "lnbGain":"55",
+        "antennaNoise":"40",
+        "lnbNoise":"40",
+        "feederLength":"0"
+    }
+]

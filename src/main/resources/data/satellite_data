@@ -1,0 +1,39 @@
+    [
+        {
+            "name": "中星11号",
+            "longtitude": "98.2",
+            "EorW": "E",
+            "transponder":[
+            {
+                "beam": "Marine",
+                "imagepath": "chinasat11-marine.jpg",
+                "eirp": [{"value": "44"},{"value": "45"},{"value": "46"}],
+                "bandtype": "Ku",
+                "rxPorla":"H",
+                "bandwidth": "54",
+                "gt":"0",
+                "sfd":"0"
+            }
+            ]
+            
+        },
+        {
+            "name": "中星12号",
+            "longtitude": "87.5",
+            "EorW": "E",
+            "transponder":[
+            {
+                "beam": "CHN",
+                "imagepath": "chinasat12-chn.jpg",
+                "eirp":[{"value":"44"},{"value":"46"},{"value":"48"},{"value":"50"}],
+                "bandtype": "Ku",
+                "rxPorla":"H",
+                "bandwidth": "54",
+                "gt":"5",
+                "sfd":"0"
+            }
+            ]
+        }
+    ]
+
+

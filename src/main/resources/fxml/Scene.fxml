@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="855.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cusc.satlink2s.FXMLController">
+    <children>
+      <SplitPane dividerPositions="0.6244979919678715" layoutX="14.0" layoutY="14.0" prefHeight="512.0" prefWidth="998.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="504.0" prefWidth="618.0">
+               <children>
+                  <TreeView fx:id="satelliteListTree" layoutX="12.0" layoutY="14.0" prefHeight="217.0" prefWidth="232.0" />
+                  <TreeView fx:id="antennaListTree" layoutX="13.0" layoutY="262.0" prefHeight="217.0" prefWidth="232.0" />
+                  <Separator layoutX="13.0" layoutY="240.0" prefHeight="15.0" prefWidth="587.0" />
+                  <GridPane layoutX="294.0" layoutY="14.0" prefHeight="188.0" prefWidth="281.0">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="84.0" />
+                      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="179.0" minWidth="10.0" prefWidth="107.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="138.0" minWidth="0.0" prefWidth="8.0" />
+                        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="46.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="波束：" />
+                        <Label text="轨位：" GridPane.rowIndex="1" />
+                        <Label text="EIRP：" GridPane.rowIndex="2" />
+                        <Label text="G/T ：" GridPane.rowIndex="3" />
+                        <Label text="SFD ：" GridPane.rowIndex="4" />
+                        <Label fx:id="labelBeam" text="---" GridPane.columnIndex="1" />
+                        <Label fx:id="labelLongtitude" text="---" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="labelSfd" text="---" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="labelGt" text="---" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="度" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label text="dBw" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label text="dB/K" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="eirpList" prefHeight="23.0" prefWidth="81.0" promptText="0.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="dB/m2" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Label text="转发器带宽：" GridPane.rowIndex="5" />
+                        <Label text="MHz" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Label fx:id="labelBandwidth" text="---" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                  </GridPane>
+                  <GridPane layoutX="294.0" layoutY="251.0" prefHeight="240.0" prefWidth="315.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="80.0" />
+                      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="133.0" minWidth="10.0" prefWidth="111.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="13.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="40.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="型号：" />
+                        <Label text="天线口径：" GridPane.rowIndex="1" />
+                        <Label text="功放功率：" GridPane.rowIndex="4" />
+                        <Label text="LNB 噪声：" GridPane.rowIndex="6" />
+                        <Label text="LNB 本振：" GridPane.rowIndex="7" />
+                        <Label text="天线效率：" GridPane.rowIndex="2" />
+                        <Label text="功放本振：" GridPane.rowIndex="5" />
+                        <Label text="天线噪声：" GridPane.rowIndex="3" />
+                        <Label fx:id="labelModel" text="---" GridPane.columnIndex="1" />
+                        <Label fx:id="labelCaliber" text="---" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label fx:id="labelEffictiveness" text="---" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label fx:id="labelAntennaNoise" text="---" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label fx:id="labelBucPower" text="---" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label fx:id="labelBucLo" text="---" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label fx:id="labelLnbNoise" text="---" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label fx:id="labelLnbLo" text="---" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Label text="米" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label text="\%" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label text="K" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label text="W" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                        <Label text="MHz" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                        <Label text="K" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                        <Label text="MHz" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="524.0" prefWidth="310.0">
+               <children>
+                  <ImageView fx:id="imageEirp" fitHeight="332.0" fitWidth="349.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <GridPane layoutX="31.0" layoutY="550.0" prefHeight="270.0" prefWidth="876.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="116.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="280.0" minWidth="10.0" prefWidth="137.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="229.0" minWidth="10.0" prefWidth="56.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="120.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="259.0" minWidth="10.0" prefWidth="127.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="43.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="96.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="188.0" minWidth="10.0" prefWidth="91.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="10.0" prefWidth="18.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="90.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="L波段接收频点" GridPane.rowIndex="1" />
+            <Label text="Ku波段接收频点" GridPane.rowIndex="2" />
+            <Label text="天线接收增益" GridPane.rowIndex="4" />
+            <Label text="系统噪声温度" GridPane.rowIndex="5" />
+            <Label text="系统G/T值" GridPane.rowIndex="6" />
+            <Label text="接收参考电平" GridPane.rowIndex="7" />
+            <Label text="L波段发射频点" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Label text="Ku波段发射频点" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Label text="天线发射增益" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Label text="发射频宽" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label text="发射载噪比C/N" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <Label text="下行链路" GridPane.columnIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label text="接收距离损耗" GridPane.rowIndex="3" />
+            <Label text="发射距离损耗" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label text="上行链路" GridPane.columnIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="接收载噪比C/N" GridPane.rowIndex="8" />
+            <Label text="星站距离" GridPane.columnIndex="6" />
+            <TextField fx:id="textFieldRxLband" alignment="CENTER_RIGHT" prefHeight="27.0" prefWidth="65.0" text="1032" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="textFieldTxLband" alignment="CENTER_RIGHT" text="1011" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label fx:id="labelRxFreq" text="---" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="labelRxLoss" text="---" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="labelRxGain" text="---" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="labelSysNoise" text="---" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="labelSysGt" text="---" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Label fx:id="labelRxLevel" text="---" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label fx:id="labelRxCn" text="---" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label fx:id="labelTxFreq" text="---" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Label fx:id="labelDistanse" text="---" GridPane.columnIndex="7" />
+            <Label fx:id="labelTxLoss" text="---" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Label fx:id="labelTxGain" text="---" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <TextField fx:id="textFieldTxBandwidth" alignment="CENTER_RIGHT" text="1" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Label fx:id="labelTxCn" text="---" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <Label text="站点经度" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Label text="站点纬度" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Label text="航向" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <TextField fx:id="textFieldLong" alignment="CENTER_RIGHT" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <TextField fx:id="textFieldLat" alignment="CENTER_RIGHT" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <TextField fx:id="textFieldBow" alignment="CENTER_RIGHT" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <Label text="方位角" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+            <Label text="俯仰角" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+            <Label text="极化角" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+            <Label text="MHz" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="GHz" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="dB" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label text="dBi" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label text="dB" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label text="dB/K" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Label text="dBm" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Label text="dB" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <Label text="MHz" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Label text="GHz" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Label text="dB" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Label text="dBi" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Label text="MHz" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <Label text="dB" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+            <Label text="Km" GridPane.columnIndex="9" />
+            <Label GridPane.columnIndex="9" GridPane.rowIndex="3" />
+            <Label text="deg" GridPane.columnIndex="9" GridPane.rowIndex="5" />
+            <Label text="deg" GridPane.columnIndex="9" GridPane.rowIndex="6" />
+            <Label text="deg" GridPane.columnIndex="9" GridPane.rowIndex="7" />
+            <Label text="deg" GridPane.columnIndex="9" GridPane.rowIndex="3" />
+            <Label text="遮挡范围" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Label text="---" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+            <Label text="---" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+            <Label text="---" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+            <TextField GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <TextField GridPane.columnIndex="9" GridPane.rowIndex="4" />
+            <Label text="是否遮挡" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+            <Label text="---" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+            <ComboBox prefWidth="150.0" visibleRowCount="2" GridPane.columnIndex="9" GridPane.rowIndex="1" />
+            <ComboBox prefWidth="150.0" visibleRowCount="2" GridPane.columnIndex="9" GridPane.rowIndex="2" />
+            <Label text="～" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+    </children>
+</AnchorPane>
